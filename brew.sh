@@ -206,6 +206,7 @@ brew install xpdf # Xpdf is a free PDF viewer and toolkit, including a text extr
 
 
 # Install DevOps binaries
+brew install consul
 brew install gradle
 brew install jenkins
 brew install maven
@@ -213,8 +214,11 @@ brew install kubectl
 brew install kubectx
 brew install garethr/kubeval/kubeval
 brew install kubernetes-helm
-
+brew install terraform
 brew install wireshark, args: ["with-qt"]
+
+
+
 
 # After installing you have to load it via adding the following to your '~/.bash_profile'
 # Move next only if `homebrew` is installed
@@ -223,6 +227,41 @@ if command -v brew >/dev/null 2>&1; then
 	[ -f $(brew --prefix)/etc/profile.d/z.sh ] && source $(brew --prefix)/etc/profile.d/z.sh
 fi
 
+
+# Install Cask
+brew tap caskroom/cask
+brew install brew-cask-completion
+brew tap caskroom/versions
+
+# Things that make my machine work
+brew cask install alfred
+brew cask install flux
+brew cask install vlc
+
+
+
+# Development tool casks
+brew cask install iterm2
+brew cask install atom
+brew cask install virtualbox # this didn't work
+# brew cask install heroku-toolbelt
+# Install docker for mac rather than docker machine
+brew cask install docker
+
+brew cask install virtualbox
+brew cask install minikube
+
+
+# franz - connect to multiple chat systems
+brew cask install franz
+brew cask install disk-inventory-x
+
+brew cask install tunnelblick
+brew cask install keybase
+brew cask install backblaze
+brew cask install avast-security
+brew cask install nordvpn
+brew cask install monodraw
 
 # Core casks
 brew cask install --appdir="/Applications" alfred
@@ -238,11 +277,11 @@ brew cask install --appdir="/Applications" vagrant
 brew cask install --appdir="/Applications" macdown
 
 # Misc casks
-brew cask install --appdir="/Applications" google-chrome
-brew cask install --appdir="/Applications" firefox
-brew cask install --appdir="/Applications" skype
-brew cask install --appdir="/Applications" slack
-brew cask install --appdir="/Applications" dropbox
+# brew cask install --appdir="/Applications" google-chrome
+# brew cask install --appdir="/Applications" firefox
+# brew cask install --appdir="/Applications" skype
+# brew cask install --appdir="/Applications" slack
+# brew cask install --appdir="/Applications" dropbox 
 brew cask install --appdir="/Applications" evernote
 brew cask install --appdir="/Applications" 1password
 #brew cask install --appdir="/Applications" gimp
@@ -251,9 +290,7 @@ brew cask install --appdir="/Applications" 1password
 #Remove comment to install LaTeX distribution MacTeX
 #brew cask install --appdir="/Applications" mactex
 
-# Install Docker, which requires virtualbox
-brew install docker
-brew install boot2docker
+
 
 # Install developer friendly quick look plugins; see https://github.com/sindresorhus/quick-look-plugins
 brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql qlimagesize webpquicklook suspicious-package
