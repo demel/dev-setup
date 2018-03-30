@@ -32,6 +32,10 @@ pip install boto
 pip install awscli
 pip install mrjob
 pip install s3cmd
+pip install aws-shell
+
+
+
 
 EXTRA_PATH=~/.extra
 echo $EXTRA_PATH
@@ -60,13 +64,13 @@ pip install awscli
 #pip install s3cmd  # Python 2 only
 
 # Uncomment if you want to hook up the aws cli autocomplete for Python 3
-#EXTRA_PATH=~/.extra
-#echo $EXTRA_PATH
-#echo "" >> $EXTRA_PATH
-#echo "" >> $EXTRA_PATH
-#echo "# Configure aws cli autocomplete, added by aws.sh" >> $EXTRA_PATH
-#echo "complete -C '~/.virtualenvs/py3-data/bin/aws_completer' aws" >> $EXTRA_PATH
-#source $EXTRA_PATH
+EXTRA_PATH=~/.extra
+echo $EXTRA_PATH
+echo "" >> $EXTRA_PATH
+echo "" >> $EXTRA_PATH
+echo "# Configure aws cli autocomplete, added by aws.sh" >> $EXTRA_PATH
+echo "complete -C '~/.virtualenvs/py3-data/bin/aws_completer' aws" >> $EXTRA_PATH
+source $EXTRA_PATH
 
 ###############################################################################
 # System-Wide Packages                                                        #
@@ -84,6 +88,8 @@ brew update
 
 brew install apache-spark
 
+brew install predictionio
+
 ###############################################################################
 # Install IPython Notebook Spark Integration
 ###############################################################################
@@ -100,8 +106,8 @@ echo "" >> $BASH_PROFILE_PATH
 echo "" >> $BASH_PROFILE_PATH
 echo "# IPython Notebook Spark integration, added by aws.sh" >> $BASH_PROFILE_PATH
 # Run $ brew info apache-spark to determine the Spark install location
-echo "export SPARK_HOME='/usr/local/Cellar/apache-spark/1.4.1'" >> $BASH_PROFILE_PATH
-echo "# Appending pyspark-shell is needed for Spark 1.4+" >> $BASH_PROFILE_PATH
+echo "export SPARK_HOME='/usr/local/Cellar/apache-spark/2.2.0'" >> $BASH_PROFILE_PATH
+echo "# Appending pyspark-shell is needed for Spark 2.2+" >> $BASH_PROFILE_PATH
 echo "export PYSPARK_SUBMIT_ARGS='--master local[2] pyspark-shell'" >> $BASH_PROFILE_PATH
 echo "" >> $BASH_PROFILE_PATH
 source $BASH_PROFILE_PATH
