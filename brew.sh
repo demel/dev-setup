@@ -46,6 +46,11 @@ chsh -s /usr/local/bin/bash
 # Install `wget` with IRI support.
 brew install wget --with-iri
 
+# A note on programming languages.
+# programming language maintenance through asdf (https://github.com/asdf-vm/asdf)
+brew install asdf
+
+
 # Install `archey` cuz why not.
 brew install archey
 
@@ -67,9 +72,12 @@ grep -q "$LINE" ~/.extra || echo "$LINE" >> ~/.extra
 
 # Install more recent versions of some OS X tools.
 brew install vim --override-system-vi
-brew install homebrew/dupes/grep
-brew install homebrew/dupes/openssh
-brew install homebrew/dupes/screen
+brew install grep --with-default-names # --with-default-names overrides system grep
+brew install openssh
+brew install screen
+brew install curl
+brew install tmux
+
 #brew install homebrew/php/php55 --with-gmp
 
 # Install font tools.
@@ -78,12 +86,12 @@ brew install sfnt2woff
 brew install sfnt2woff-zopfli
 brew install woff2
 
+
+
 # Install some CTF tools; see https://github.com/ctfs/write-ups.
 brew install aircrack-ng
 brew install asciinema
-
 brew install autoconf
-
 brew install bfg
 brew install binutils
 brew install binwalk
@@ -117,6 +125,8 @@ brew install xz
 brew install ack
 brew install apr
 brew install apr-util
+brew install automake
+brew install cmake
 brew install dark-mode
 #brew install exiv2
 brew install g2
@@ -126,6 +136,7 @@ brew install git-flow
 brew install git-extras
 brew install hub
 brew install imagemagick --with-webp
+brew install jq
 brew install librsvg
 brew install libyaml
 brew install lua
@@ -158,6 +169,46 @@ brew link libxslt --force
 # Install Heroku
 # brew install heroku-toolbelt
 # heroku update
+
+
+# Install GCP SDKs for kubernetes if needed
+# brew install app-engine-java
+# brew install app-engine-python
+
+# Install additional command line tools
+
+brew install fzf # fuzzy commandline (https://github.com/junegunn/fzf)
+
+# To install useful key bindings and fuzzy completion:
+$(brew --prefix)/opt/fzf/install
+
+brew install fd # A simple, fast and user-friendly alternative to 'find' (https://github.com/sharkdp/fd)
+brew install ranger # https://github.com/ranger/ranger https://gist.github.com/KyleJamesWalker/11275311
+brew install tig # Git repository browser https://github.com/jonas/tig
+brew install z # https://gist.github.com/mischah/8149239
+brew install mackup # Keep your application settings in sync. Supports Box and dropbox (https://github.com/lra/mackup)
+
+
+
+
+# Install DevOps binaries
+brew install gradle
+brew install jenkins
+brew install maven
+brew install kubectl
+brew install kubectx
+brew install garethr/kubeval/kubeval
+brew install kubernetes-helm
+
+brew install wireshark, args: ["with-qt"]
+
+# After installing you have to load it via adding the following to your '~/.bash_profile'
+# Move next only if `homebrew` is installed
+if command -v brew >/dev/null 2>&1; then
+	# Load rupa's z if installed
+	[ -f $(brew --prefix)/etc/profile.d/z.sh ] && source $(brew --prefix)/etc/profile.d/z.sh
+fi
+
 
 # Core casks
 brew cask install --appdir="/Applications" alfred

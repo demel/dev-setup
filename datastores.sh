@@ -30,7 +30,7 @@ brew install sqlite
 brew install sbt 
 brew install scala
 brew install apache-arrow
-brew install apache-spark
+# brew install apache-spark
 brew install predictionio
 
 
