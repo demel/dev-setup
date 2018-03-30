@@ -80,6 +80,10 @@ brew install tmux
 brew install tor
 brew install unrar
 
+# utils
+brew install watchman #Watches files and records, or triggers actions, when they change. (https://github.com/facebook/watchman)
+
+
 
 #brew install homebrew/php/php55 --with-gmp
 
