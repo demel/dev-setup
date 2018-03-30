@@ -46,6 +46,9 @@ chsh -s /usr/local/bin/bash
 # Install `wget` with IRI support.
 brew install wget --with-iri
 
+# Install `archey` cuz why not.
+brew install archey
+
 # Install RingoJS and Narwhal.
 # Note that the order in which these are installed is important;
 # see http://git.io/brew-narwhal-ringo.
@@ -67,7 +70,7 @@ brew install vim --override-system-vi
 brew install homebrew/dupes/grep
 brew install homebrew/dupes/openssh
 brew install homebrew/dupes/screen
-brew install homebrew/php/php55 --with-gmp
+#brew install homebrew/php/php55 --with-gmp
 
 # Install font tools.
 brew tap bramstein/webfonttools
@@ -77,18 +80,27 @@ brew install woff2
 
 # Install some CTF tools; see https://github.com/ctfs/write-ups.
 brew install aircrack-ng
+brew install asciinema
+
+brew install autoconf
+
 brew install bfg
 brew install binutils
 brew install binwalk
+brew install cfssl
 brew install cifer
+brew install cowsay
 brew install dex2jar
 brew install dns2tcp
 brew install fcrackzip
 brew install foremost
+brew install fortune
+brew install hashcat
 brew install hashpump
 brew install hydra
 brew install john
 brew install knock
+brew install md5sha1sum
 brew install netpbm
 brew install nmap
 brew install pngcheck
@@ -103,25 +115,36 @@ brew install xz
 
 # Install other useful binaries.
 brew install ack
+brew install apr
+brew install apr-util
 brew install dark-mode
 #brew install exiv2
+brew install g2
 brew install git
 brew install git-lfs
 brew install git-flow
 brew install git-extras
 brew install hub
 brew install imagemagick --with-webp
+brew install librsvg
+brew install libyaml
 brew install lua
 brew install lynx
+brew install openssl@1.1
+brew install openvpn, restart_service: true
 brew install p7zip
 brew install pigz
 brew install pv
+brew install pwgen
 brew install rename
 brew install rhino
 brew install speedtest_cli
 brew install ssh-copy-id
-brew install tree
+brew install thefuck
+brew install tig
+brew install trees
 brew install webkit2png
+brew install wget
 brew install zopfli
 brew install pkg-config libffi
 brew install pandoc
@@ -133,8 +156,8 @@ brew link libxml2 --force
 brew link libxslt --force
 
 # Install Heroku
-brew install heroku-toolbelt
-heroku update
+# brew install heroku-toolbelt
+# heroku update
 
 # Core casks
 brew cask install --appdir="/Applications" alfred
