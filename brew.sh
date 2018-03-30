@@ -199,7 +199,7 @@ chsh -s /usr/local/bin/fish
 brew tap fisherman/tap
 brew install --HEAD fisherman
 
-
+brew install ranger # see https://www.everythingcli.org/ranger-image-preview-on-osx-with-iterm2/
 brew install mediainfo #M ediaInfo is a convenient unified display of the most relevant technical and tag data for video and audio files.
 brew install atool # atool is a script for managing file archives of various types (tar, tar+gzip, zip etc).
 brew install xpdf # Xpdf is a free PDF viewer and toolkit, including a text extractor, image converter, HTML converter, and more.
