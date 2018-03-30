@@ -18,11 +18,16 @@ fi
 # Make sure we’re using the latest Homebrew.
 brew update
 
-brew cask install --appdir="~/Applications" java
-brew cask install --appdir="~/Applications" intellij-idea-ce
-brew cask install --appdir="~/Applications" android-studio
 
-brew install android-sdk
+brew cask install caskroom/versions/java8
+read -rp "Use (paid) IntelliJ? (y/n)" answer
+if echo "$answer" | grep -iq "^y" ;then
+    brew cask install intellij-idea
+else
+    brew cask install intellij-idea-ce
+fi
+
+
 
 # Remove outdated versions from the cellar.
 brew cleanup

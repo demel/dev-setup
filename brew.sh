@@ -77,6 +77,9 @@ brew install openssh
 brew install screen
 brew install curl
 brew install tmux
+brew install tor
+brew install unrar
+
 
 #brew install homebrew/php/php55 --with-gmp
 
@@ -240,6 +243,11 @@ brew cask install vlc
 
 
 
+appcleaner
+
+brave
+
+
 # Development tool casks
 brew cask install iterm2
 brew cask install atom
@@ -247,15 +255,19 @@ brew cask install virtualbox # this didn't work
 # brew cask install heroku-toolbelt
 # Install docker for mac rather than docker machine
 brew cask install docker
-
+brew cask install docker-toolbox
 brew cask install virtualbox
 brew cask install minikube
 
 
 # franz - connect to multiple chat systems
 brew cask install franz
-brew cask install disk-inventory-x
 
+
+brew cask install disk-inventory-x
+brew cask install appcleaner
+brew cask install onyx
+brew cask install graphiql
 brew cask install tunnelblick
 brew cask install keybase
 brew cask install backblaze
