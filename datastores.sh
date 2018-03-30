@@ -25,6 +25,10 @@ brew install mongo
 brew install redis
 brew install elasticsearch
 brew install sqlite
+
+# Install Data Engineering toolset
+brew install sbt 
+brew install scala
 brew install apache-arrow
 brew install apache-spark
 brew install predictionio
