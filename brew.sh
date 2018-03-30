@@ -187,8 +187,22 @@ brew install ranger # https://github.com/ranger/ranger https://gist.github.com/K
 brew install tig # Git repository browser https://github.com/jonas/tig
 brew install z # https://gist.github.com/mischah/8149239
 brew install mackup # Keep your application settings in sync. Supports Box and dropbox (https://github.com/lra/mackup)
+brew install trash #This is a small command-line program for OS X that moves files or folders to the trash.
+
+# fish
+brew install fish --HEAD
+
+echo /usr/local/bin/fish | sudo tee -a /etc/shells
+chsh -s /usr/local/bin/fish
+
+# fisher
+brew tap fisherman/tap
+brew install --HEAD fisherman
 
 
+brew install mediainfo #M ediaInfo is a convenient unified display of the most relevant technical and tag data for video and audio files.
+brew install atool # atool is a script for managing file archives of various types (tar, tar+gzip, zip etc).
+brew install xpdf # Xpdf is a free PDF viewer and toolkit, including a text extractor, image converter, HTML converter, and more.
 
 
 # Install DevOps binaries
