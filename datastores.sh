@@ -24,6 +24,14 @@ brew install postgresql
 brew install mongo
 brew install redis
 brew install elasticsearch
+brew install sqlite
+brew install apache-arrow
+brew install apache-spark
+brew install predictionio
+
+
+
+
 
 # Install mysql workbench
 # Install Cask
