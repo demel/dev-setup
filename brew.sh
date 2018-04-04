@@ -255,6 +255,7 @@ brave
 # Development tool casks
 brew cask install iterm2
 brew cask install atom
+brew cask install visual-studio-code
 brew cask install virtualbox # this didn't work
 # brew cask install heroku-toolbelt
 # Install docker for mac rather than docker machine
