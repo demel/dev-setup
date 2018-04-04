@@ -278,6 +278,8 @@ brew cask install backblaze
 brew cask install avast-security
 brew cask install nordvpn
 brew cask install monodraw
+brew cask install skype-for-business
+
 
 # Core casks
 brew cask install --appdir="/Applications" alfred
@@ -288,7 +290,7 @@ brew cask install --appdir="~/Applications" xquartz
 # Development tool casks
 brew cask install --appdir="/Applications" sublime-text
 brew cask install --appdir="/Applications" atom
-brew cask install --appdir="/Applications" virtualbox
+# brew cask install --appdir="/Applications" virtualbox
 brew cask install --appdir="/Applications" vagrant
 brew cask install --appdir="/Applications" macdown
 
